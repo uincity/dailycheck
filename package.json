@@ -1,0 +1,12 @@
+{
+  "name": "onbid-daily-check",
+  "version": "1.0.0",
+  "description": "온비드 일일점검 체크리스트 대시보드 Node.js 버전",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

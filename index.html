@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>온비드 일일점검 체크리스트</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <header class="dashboard__header">
+        <div class="dashboard__title" id="dashboardTitle"></div>
+        <div class="dashboard__meta">
+          <section class="inspectors">
+            <h2>점검자</h2>
+            <div class="inspectors__input">
+              <input
+                type="text"
+                id="inspectorInput"
+                placeholder="이름 입력 후 Enter"
+                aria-label="점검자 이름 입력"
+              />
+              <button type="button" id="addInspectorBtn" class="btn">
+                추가
+              </button>
+            </div>
+            <div
+              class="inspectors__list"
+              id="inspectorList"
+              aria-live="polite"
+            ></div>
+          </section>
+          <section class="progress" aria-live="polite">
+            <h2>진척도</h2>
+            <div class="progress__summary">
+              <span class="progress__count" id="completedCount"></span>
+              <span class="progress__percent" id="completionPercent"></span>
+            </div>
+            <div class="progress__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress__bar-fill" id="progressFill"></div>
+            </div>
+          </section>
+        </div>
+      </header>
+
+      <main class="dashboard__content" id="checklistContainer"></main>
+
+      <footer class="dashboard__footer">
+        <button type="button" class="btn btn--primary" id="exportExcelBtn">
+          엑셀 다운로드
+        </button>
+        <button type="button" class="btn" id="exportPdfBtn">
+          PDF 출력
+        </button>
+        <button type="button" class="btn btn--danger" id="resetBtn">
+          초기화
+        </button>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
